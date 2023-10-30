@@ -1,0 +1,20 @@
+{
+    "openapi" : "3.0.3",
+    "info": {
+        "title": "To Do List RestFul API",
+        "version": "1",
+        "description": "openapi for To Do List RestFul API",
+        "termsOfService": "https://www.facebook.com/Falldy.H/",
+        "contact": {
+            "name": "Faldi Harido Fihan",
+            "email": "faldi.undetected@gmail.com",
+            "url": "https://github.com/Falllll"
+        },
+        "license": {
+            "name": "APACHE 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0"
+        }
+    },
+    "servers": [],
+    "paths": {}
+}
