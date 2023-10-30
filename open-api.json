@@ -36,5 +36,22 @@
         "description": "Link github",
         "url": "https://github.com/falllll"
     },
-    "paths": {}
+    "paths": {
+        "/to-do-list":{
+            "get":{
+
+            },
+            "post":{
+
+            }
+        },
+        "/to-do-list/{todolistId}":{
+            "put":{
+                
+            },
+            "delete":{
+
+            }
+        }
+    }
 }
