@@ -39,15 +39,19 @@
     "paths": {
         "/to-do-list":{
             "get":{
-
+                "summary": "Get All Todolist",
+                "description": "Only will return active todolist, complete todolist or deleted todolist will be removed",
+                "responses": {}
             },
             "post":{
-
+                "summary": "Create new Todolist",
+                "description": "Create new active todolist",
+                "responses": {}
             }
         },
         "/to-do-list/{todolistId}":{
             "put":{
-                
+
             },
             "delete":{
 
