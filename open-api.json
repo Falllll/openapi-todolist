@@ -32,5 +32,9 @@
             }
         }
     ],
+    "externalDocs": {
+        "description": "Link github",
+        "url": "https://github.com/falllll"
+    },
     "paths": {}
 }
