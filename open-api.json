@@ -15,6 +15,22 @@
             "url": "https://www.apache.org/licenses/LICENSE-2.0"
         }
     },
-    "servers": [],
+    "servers": [
+        {
+            "description": "To Do List RestFul API server",
+            "url": "https://localhost:8000/{env}",
+            "variables": {
+                "env":{
+                    "description": "server environment",
+                    "default": "dev",
+                    "enum" : [
+                        "dev",
+                        "qa",
+                        "prod"
+                    ]
+                }
+            }
+        }
+    ],
     "paths": {}
 }
