@@ -43,16 +43,27 @@
                 "description": "Only will return active todolist, complete todolist or deleted todolist will be removed",
                 "parameters": [
                     {
-                        "name": "is_include",
+                        "name": "include_done",
                         "in": "query",
                         "required": false,
-                        "description": "Is include done To DO List"
+                        "description": "Is include done To Do List",
+                        "schema":{
+                            "type": "boolean",
+                            "nullable": true,
+                            "default": false
+                        }
                     },
                                         {
                         "name": "name",
                         "in": "query",
                         "required": false,
-                        "description": "Filter To DO List by name"
+                        "description": "Filter To DO List by name",
+                        "schema":{
+                            "type": "string",
+                            "nullable": true,
+                            "minLength": 1,
+                            "maxLength": 100
+                        }
                     }
                 ],
                 "responses": {}
@@ -72,7 +83,12 @@
                         "name": "todolistId",
                         "in": "path",
                         "required": true,
-                        "description": "To do List updated"
+                        "description": "To do List updated",
+                        "schema":{
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 100
+                        }
                     }
                 ],
                 "responses": {}
@@ -85,7 +101,12 @@
                         "name": "todolistId",
                         "in": "path",
                         "required": true,
-                        "description": "To Do List Deleted"
+                        "description": "To Do List Deleted",
+                        "schema":{
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 100
+                        }
                     }
                 ],
                 "responses": {}
