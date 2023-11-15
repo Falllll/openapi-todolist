@@ -63,6 +63,16 @@
                             "nullable": true,
                             "minLength": 1,
                             "maxLength": 100
+                        },
+                        "examples": {
+                            "java": {
+                                "description": "Example Java",
+                                "value": "Java"
+                            },
+                            "php":{
+                                "description": "Example PHP",
+                                "value":"PHP"
+                            }
                         }
                     }
                 ],
@@ -99,6 +109,28 @@
                                         }
                                     }
                                 }
+                            },
+                            "examples": {
+                                "java":{
+                                    "description": "Example Java",
+                                    "value":{
+                                        "name": "Java",
+                                        "priority": 3,
+                                        "tags":[
+                                            "Java", "Programming"
+                                        ]
+                                    }
+                                },
+                                "php":{
+                                    "description": "Example PHP",
+                                    "value": {
+                                        "name": "PHP",
+                                        "priority": 5,
+                                        "tags": [
+                                            "PHP", "Programming"
+                                        ]
+                                    }
+                                }
                             }
                         }
                     }
@@ -120,6 +152,16 @@
                             "type": "string",
                             "minLength": 1,
                             "maxLength": 100
+                        },
+                        "examples":{
+                            "java":{
+                                "description": "Sample id for Java",
+                                "value":"1"
+                            },
+                            "php":{
+                                "description": "Sample id for PHP",
+                                "value":"2"
+                            }
                         }
                     }
                 ],
@@ -149,6 +191,28 @@
                                             "type": "string",
                                             "minLength": 1
                                         }
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "java":{
+                                    "description": "Example Java",
+                                    "value":{
+                                        "name": "Java",
+                                        "priority": 3,
+                                        "tags":[
+                                            "Java", "Programming"
+                                        ]
+                                    }
+                                },
+                                "php":{
+                                    "description": "Example PHP",
+                                    "value": {
+                                        "name": "PHP",
+                                        "priority": 5,
+                                        "tags": [
+                                            "PHP", "Programming"
+                                        ]
                                     }
                                 }
                             }
