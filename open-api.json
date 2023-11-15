@@ -7,7 +7,7 @@
         "termsOfService": "https://www.facebook.com/Falldy.H/",
         "contact": {
             "name": "Faldi Harido Fihan",
-            "email": "faldi.undetected@gmail.com",
+            "email": "faldiharido@gmail.com",
             "url": "https://github.com/Falllll"
         },
         "license": {
@@ -76,7 +76,62 @@
                         }
                     }
                 ],
-                "responses": {}
+                "responses": {
+                    "200":{
+                        "description": "Success get all to do list",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "array",
+                                    "items":{
+                                        "type": "object",
+                                        "properties": {
+                                            "id":{
+                                                "type": "string"
+                                            },
+                                            "name":{
+                                                "type": "string"
+                                            },
+                                            "priority":{
+                                                "type": "number",
+                                                "format": "int32"
+                                            },
+                                            "tags":{
+                                                "type": "array",
+                                                "items":{
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Success":{
+                                        "description": "Example Success get all to do list",
+                                        "value":[
+                                            {
+                                                "id":"1",
+                                                "name":"Java",
+                                                "priority":3,
+                                                "tags":[
+                                                    "Java", "Programming"
+                                                ]
+                                            },
+                                            {
+                                                "id":"2",
+                                                "name":"PHP",
+                                                "priority":5,
+                                                "tags":[
+                                                    "PHP", "Programming"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             },
             "post":{
                 "summary": "Create new Todolist",
@@ -135,7 +190,60 @@
                         }
                     }
                 },
-                "responses": {}
+                "responses": {
+                    "200":{
+                        "description": "Success Create todolist",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "id":{
+                                            "type": "string"
+                                        },
+                                        "name":{
+                                            "type": "string"
+                                        },
+                                        "priority":{
+                                            "type": "number",
+                                                "format": "int32"
+                                        },
+                                        "tags":{
+                                            "type": "array",
+                                            "items":{
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "java":{
+                                        "description": "Success Create Java todolist",
+                                        "value":{
+                                            "id":"1",
+                                            "name":"Java",
+                                            "priority":3,
+                                            "tags":[
+                                                "Java", "Programming"
+                                            ]
+                                        }
+                                    },
+                                    "php":{
+                                        "description": "Success Create PHP todolist",
+                                        "value":{
+                                            "id":"1",
+                                            "name":"PHP",
+                                            "priority":3,
+                                            "tags":[
+                                                "PHP", "Programming"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         },
         "/to-do-list/{todolistId}":{
@@ -219,7 +327,60 @@
                         }
                     }
                 },
-                "responses": {}
+                "responses": {
+                    "200":{
+                        "description": "Success Update todolist",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "id":{
+                                            "type": "string"
+                                        },
+                                        "name":{
+                                            "type": "string"
+                                        },
+                                        "priority":{
+                                            "type": "number",
+                                                "format": "int32"
+                                        },
+                                        "tags":{
+                                            "type": "array",
+                                            "items":{
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "java":{
+                                        "description": "Success Update Java todolist",
+                                        "value":{
+                                            "id":"1",
+                                            "name":"Java",
+                                            "priority":3,
+                                            "tags":[
+                                                "Java", "Programming"
+                                            ]
+                                        }
+                                    },
+                                    "php":{
+                                        "description": "Success Update PHP todolist",
+                                        "value":{
+                                            "id":"1",
+                                            "name":"PHP",
+                                            "priority":3,
+                                            "tags":[
+                                                "PHP", "Programming"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             },
             "delete":{
                 "summary": "Delete todolist",
@@ -237,7 +398,54 @@
                         }
                     }
                 ],
-                "responses": {}
+                "responses": {
+                    "200":{
+                        "description": "Success Delete todolist",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "success":{
+                                            "type": "boolean"
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "description": "Success delete todolist",
+                                        "value":{
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404":{
+                        "description": "Failed Delete todolist",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "success":{
+                                            "type": "boolean"
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "failed":{
+                                        "description": "Success delete todolist",
+                                        "value":{
+                                            "failed": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
