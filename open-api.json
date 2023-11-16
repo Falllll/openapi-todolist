@@ -37,6 +37,11 @@
     "paths": {
         "/to-do-list": {
             "get": {
+                "security": [
+                    {
+                        "TodoListAuth":[]
+                    }
+                ],
                 "tags": ["Todolist"],
                 "summary": "Get All Todolist",
                 "description": "Only will return active todolist, complete todolist or deleted todolist will be removed",
@@ -110,6 +115,11 @@
                 }
             },
             "post": {
+                "security": [
+                    {
+                        "TodoListAuth":[]
+                    }
+                ],
                 "tags": ["Todolist"],
                 "summary": "Create new Todolist",
                 "description": "Create new active todolist",
@@ -185,6 +195,11 @@
         },
         "/to-do-list/{todolistId}": {
             "put": {
+                "security": [
+                    {
+                        "TodoListAuth":[]
+                    }
+                ],
                 "tags": ["Todolist"],
                 "summary": "Update existing todolist",
                 "description": "Update todolist",
@@ -261,6 +276,11 @@
                 }
             },
             "delete": {
+                "security": [
+                    {
+                        "TodoListAuth":[]
+                    }
+                ],
                 "tags": ["Todolist"],
                 "summary": "Delete todolist",
                 "description": "Delete todolist",
@@ -319,6 +339,14 @@
         }
     },
     "components": {
+        "securitySchemes": {
+            "TodoListAuth": {
+                "type": "apiKey",
+                "description": "Authentication for todolist RestFul Api",
+                "in": "header",
+                "name": "X-API-Key"
+            }
+        },
         "parameters": {
             "todolistId": {
                 "name": "todolistId",
