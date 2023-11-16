@@ -39,6 +39,7 @@
     "paths": {
         "/to-do-list":{
             "get":{
+                "tags": ["Todolist"],
                 "summary": "Get All Todolist",
                 "description": "Only will return active todolist, complete todolist or deleted todolist will be removed",
                 "parameters": [
@@ -134,6 +135,7 @@
                 }
             },
             "post":{
+                "tags": ["Todolist"],
                 "summary": "Create new Todolist",
                 "description": "Create new active todolist",
                 "requestBody" : {
@@ -248,6 +250,7 @@
         },
         "/to-do-list/{todolistId}":{
             "put":{
+                "tags": ["Todolist"],
                 "summary": "Update existing todolist",
                 "description": "Update todolist",
                 "parameters": [
@@ -383,6 +386,7 @@
                 }
             },
             "delete":{
+                "tags": ["Todolist"],
                 "summary": "Delete todolist",
                 "description": "Delete todolist",
                 "parameters": [
