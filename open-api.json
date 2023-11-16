@@ -37,11 +37,9 @@
     "paths": {
         "/to-do-list": {
             "get": {
-                "security": [
-                    {
-                        "TodoListAuth":[]
-                    }
-                ],
+                "security": [{
+                    "TodoListAuth": []
+                }],
                 "tags": ["Todolist"],
                 "summary": "Get All Todolist",
                 "description": "Only will return active todolist, complete todolist or deleted todolist will be removed",
@@ -115,11 +113,9 @@
                 }
             },
             "post": {
-                "security": [
-                    {
-                        "TodoListAuth":[]
-                    }
-                ],
+                "security": [{
+                    "TodoListAuth": []
+                }],
                 "tags": ["Todolist"],
                 "summary": "Create new Todolist",
                 "description": "Create new active todolist",
@@ -195,11 +191,9 @@
         },
         "/to-do-list/{todolistId}": {
             "put": {
-                "security": [
-                    {
-                        "TodoListAuth":[]
-                    }
-                ],
+                "security": [{
+                    "TodoListAuth": []
+                }],
                 "tags": ["Todolist"],
                 "summary": "Update existing todolist",
                 "description": "Update todolist",
@@ -276,11 +270,9 @@
                 }
             },
             "delete": {
-                "security": [
-                    {
-                        "TodoListAuth":[]
-                    }
-                ],
+                "security": [{
+                    "TodoListAuth": []
+                }],
                 "tags": ["Todolist"],
                 "summary": "Delete todolist",
                 "description": "Delete todolist",
@@ -370,35 +362,31 @@
                 }
             }
         },
-        "schemas": {
+          "schemas": {
             "TodoList": {
-                "type": "object",
-                "properties": {
-                    "type": "object",
-                    "properties": {
-                        "id": {
-                            "type": "string"
-                        },
-                        "name": {
-                            "type": "string"
-                        },
-                        "priority": {
-                            "type": "number",
-                            "format": "int32"
-                        },
-                        "tags": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            }
-                        }
-                    }
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "priority": {
+                  "type": "number",
+                  "format": "int32"
+                },
+                "tags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
+              }
             },
             "CreateOrUpdateTodoList": {
                 "type": "object",
                 "properties": {
-                    "properties": {
                         "name": {
                             "type": "string"
                         },
@@ -412,7 +400,6 @@
                                 "type": "string"
                             }
                         }
-                    }
                 }
             },
             "ArrayTodoList": {
